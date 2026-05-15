@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        You ordering Pizaa huh?
+    </title>
+     <script src="Pizza.js" defer></script>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="pizza-calculator">
+    <h2>Pizza Order Calculator</h2>
+    
+    <form id="pizzaForm">
+        <!-- Size Selection -->
+        <div class="form-group">
+            <label>Pizza Size:</label>
+            <select id="pizzaSize" required>
+                <option value="">Select a size</option>
+                <option value="10">Small ($10)</option>
+                <option value="12">Medium ($12)</option>
+                <option value="14">Large ($14)</option>
+            </select>
+        </div>
 
+        <!-- Quantity -->
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input 
+                type="number" 
+                id="quantity" 
+                min="1" 
+                value="1" 
+                required
+            >
+        </div>
+
+        <!-- Price Display -->
+        <div class="price-display">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Tax (8.875%): $<span id="tax">0.00</span></p>
+            <p class="total">Total: $<span id="total">0.00</span></p>
+        </div>
+
+        <button type="submit" id="submitBtn">Place Order</button>
+    </form>
+
+    <div id="orderSummary" class="summary-hidden">
+        <!-- Order summary will appear here -->
+    </div>
+</div>
+</body>
+
+</html>
